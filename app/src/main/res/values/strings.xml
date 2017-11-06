@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">Image Loader</string>
+  <string name="action_settings">Settings</string>
+  <string name="main_image">main image</string>
+</resources>

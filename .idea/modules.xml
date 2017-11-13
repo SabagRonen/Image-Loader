@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Image-Loader.iml" filepath="$PROJECT_DIR$/Image-Loader.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reactiveRoutines/reactiveRoutines.iml" filepath="$PROJECT_DIR$/reactiveRoutines/reactiveRoutines.iml" />
     </modules>
   </component>
 </project>

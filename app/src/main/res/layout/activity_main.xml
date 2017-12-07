@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ronensabag.myapplication.MainActivity"
+    tools:context=".mainActivity.MainActivity"
     >
 
   <android.support.design.widget.AppBarLayout
@@ -22,15 +22,32 @@
         app:popupTheme="@style/AppTheme.PopupOverlay"
         />
 
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:textSize="20sp"
+        />
+
   </android.support.design.widget.AppBarLayout>
 
   <include layout="@layout/content_main"/>
 
   <android.support.design.widget.FloatingActionButton
-      android:id="@+id/fab"
+      android:id="@+id/fabParallel"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="bottom|end"
+      android:layout_margin="@dimen/fab_margin"
+      app:srcCompat="@drawable/ic_file_download_black_24dp"
+      />
+
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/fabFirst"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|start"
       android:layout_margin="@dimen/fab_margin"
       app:srcCompat="@drawable/ic_file_download_black_24dp"
       />

@@ -8,4 +8,6 @@ import dagger.android.AndroidInjector
 interface MainActivityComponent : AndroidInjector<MainActivity> {
     @Subcomponent.Builder
     abstract class Builder : AndroidInjector.Builder<MainActivity>()
+
+    fun getMainViewModel() : MainViewModel
 }

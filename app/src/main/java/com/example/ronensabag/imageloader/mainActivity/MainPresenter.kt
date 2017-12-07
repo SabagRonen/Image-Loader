@@ -1,9 +1,23 @@
 package com.example.ronensabag.imageloader.mainActivity
 
-class MainPresenter(val viewModel: MainViewModel, val mainModel: MainModel) {
+import javax.inject.Inject
+
+class MainPresenter @Inject constructor(private val viewModel: MainViewModel, private val mainModel: MainModel) {
+    fun init() {
+        viewModel.stateText = "State = None"
+    }
+
     fun loadImageClicked() {
-        mainModel.loadImage("https://gett.com/uk/wp-content/uploads/sites/6/2015/11/Home_UK.png") {
-            viewModel.image = it
+        viewModel.stateText = "State = load images"
+        mainModel.loadImages() { dataStream ->
+            dataStream.notifyOnChange { bitmap ->
+                viewModel.image = bitmap
+            }
         }
+    }
+
+    fun loadFirstImageClicked() {
+        viewModel.stateText = "State = load one images"
+        mainModel.loadOneImage { viewModel.image = it }
     }
 }

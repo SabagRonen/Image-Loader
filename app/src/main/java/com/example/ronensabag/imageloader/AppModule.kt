@@ -9,6 +9,5 @@ import dagger.Provides
 
 @Module (subcomponents = arrayOf(MainActivityComponent::class))
 class AppModule (val context: Context) {
-    @Provides fun provideBitmapEntity() = BitmapEntity(context)
-    @Provides fun provideMainModel(bitmapEntity: BitmapEntity) = MainModel(bitmapEntity)
+    @Provides fun provideContext() = context
 }
